@@ -14,7 +14,7 @@ subtask(TASK_COMPILE_SOLIDITY_GET_SOLC_BUILD, async (args) => {
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: {
-    version: "0.8.26",
+    version: "0.8.17",
     settings: {
       optimizer: {
         enabled: true,
