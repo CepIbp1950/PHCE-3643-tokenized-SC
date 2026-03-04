@@ -28,21 +28,21 @@ contract BasicCompliance is ICompliance, Ownable {
         return _tokenBound == _token;
     }
 
-    function canTransfer(address _from, address _to, uint256 _amount) external view override returns (bool) {
+    function canTransfer(address /*_from*/, address /*_to*/, uint256 /*_amount*/) external pure override returns (bool) {
         // Basic compliance: allow all transfers.
         // Override in derived contracts to add compliance rules.
         return true;
     }
 
-    function transferred(address _from, address _to, uint256 _amount) external override onlyToken {
+    function transferred(address /*_from*/, address /*_to*/, uint256 /*_amount*/) external override onlyToken {
         // Record transfer for compliance tracking
     }
 
-    function created(address _to, uint256 _amount) external override onlyToken {
+    function created(address /*_to*/, uint256 /*_amount*/) external override onlyToken {
         // Record minting for compliance tracking
     }
 
-    function destroyed(address _userAddress, uint256 _amount) external override onlyToken {
+    function destroyed(address /*_userAddress*/, uint256 /*_amount*/) external override onlyToken {
         // Record burning for compliance tracking
     }
 
